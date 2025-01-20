@@ -1,0 +1,24 @@
+\\Go to CMD
+C:\Users\user>awsconfigure
+\\To login into EC2 instance
+C:\Users\user>ssh -i <PATH TO .PEM FILE> ubuntu@<PUBLIC-KEY>
+\\install aws cli
+ubutntu@ip<IP ADDRESS>$sudo snap install aws-cli --classic
+ubutntu@ip<IP ADDRESS>$aws --version
+\\create and edit aws_resource_tracker.sh file using vim command
+ubutntu@ip<IP ADDRESS>$vim aws_resource_tracker.sh
+\\assigning permissions fot aws_resource_tracker.sh file
+ubutntu@ip<IP ADDRESS>$chmod 777 aws_resource_tracker.sh
+\\manually run aws_resource_tracker.sh file
+ubutntu@ip<IP ADDRESS>$./aws_resource_tracker.sh
+
+
+\\enter into crontab
+ubutntu@ip<IP ADDRESS>$crontab -e
+\\edit cron expression as mentioned in readme file
+\\check status of cron after it ran 
+ubutntu@ip<IP ADDRESS>$systemctl status cron
+\\get list of cron expressions which are enabled
+ubutntu@ip<IP ADDRESS>$crontab -l
+\\get list of files which we create and which got created after scheduler ran
+ubutntu@ip<IP ADDRESS>$ls
